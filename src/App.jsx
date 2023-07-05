@@ -1,4 +1,5 @@
 import "./App.css";
+import { AES } from "crypto-js";
 
 function App() {
   const sendMessageNative = () => {
@@ -8,10 +9,11 @@ function App() {
     if (window.ReactNativeWebView) {
       //postMessage = window.ReactNativeWebView.postMessage;
       //postMessage('Open Camera Native');
-      window.ReactNativeWebView.postMessage('Open Native 2');
+      const cipherText = AES.encrypt("GapyMessage", "GapyPass");
+      window.ReactNativeWebView.postMessage(cipherText.toString());
     }
     
-    console.log('Comando enviado')
+    //console.log('Comando enviado')
   };
 
   return (
