@@ -7,8 +7,8 @@ function App() {
     let postMessage = window.parent.postMessage;
     if (window.ReactNativeWebView) {
       postMessage = window.ReactNativeWebView.postMessage;
-      postMessage('Open Camera Native');
-      //window.ReactNativeWebView.postMessage('Open Native 2');
+      //postMessage('Open Camera Native');
+      window.ReactNativeWebView.postMessage('Open Native 2');
     }
     
     console.log('Comando enviado')
