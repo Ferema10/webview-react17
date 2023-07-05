@@ -4,9 +4,9 @@ function App() {
   const sendMessageNative = () => {
     //window.ReactNativeWebView.postMessage("Open Camera Native");
     //find a postMessage to talk to hoster
-    let postMessage = window.parent.postMessage;
+    //let postMessage = window.parent.postMessage;
     if (window.ReactNativeWebView) {
-      postMessage = window.ReactNativeWebView.postMessage;
+      //postMessage = window.ReactNativeWebView.postMessage;
       //postMessage('Open Camera Native');
       window.ReactNativeWebView.postMessage('Open Native 2');
     }
